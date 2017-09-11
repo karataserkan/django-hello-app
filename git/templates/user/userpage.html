@@ -1,0 +1,9 @@
+{% if repos %}
+    <ul>
+    {% for repo in repos %}
+        <li>{{ repo.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No repos are available.</p>
+{% endif %}
