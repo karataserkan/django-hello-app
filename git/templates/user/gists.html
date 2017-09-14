@@ -1,0 +1,9 @@
+{% if gists %}
+    <ul>
+    {% for gist in gists %}
+        <li>{{ gist.created_at }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No gists are available.</p>
+{% endif %}

@@ -12,3 +12,12 @@ def UserPage(request):
 	g = Github("username", "password")
 	repos = g.get_user().get_repos()
 	return HttpResponse(template.render({'repos':repos}, request))
+	
+def Gist(request):
+	template = loader.get_template('user/gists.html')
+	g = Github()
+	gists = g.get_user('karataserkan').get_gists()
+
+	
+	return HttpResponse(template.render({'gists':gists}, request))
+
